@@ -142,7 +142,7 @@ console.log(gameScore);
 gameScore += 3;
 console.log(gameScore);
 
-console.log(5 !== 5);
+console.log(5 === '5');
 
 
 console.log(5 == 5 && 5 ==='5' && 0 ==0);
@@ -160,28 +160,64 @@ console.log(playStatus);
 // Development: 90
 // Project Management: 80
 
+const designGrade = 85;
+const developmentGrade = 90;
+const projectManagementGrade = 80;
+const minimumGrade = 50;
 // Step 2: Calculate the total grade for the student across the three courses and store it in a variable called totalGrade.
+const totalGrade = designGrade + developmentGrade + projectManagementGrade;
+console.log("total grade " + totalGrade);
 
 // Step 3: Calculate the average grade for the student and store it in a variable called averageGrade.
 
+const averageGrade = totalGrade / 3;
+console.log("average " + averageGrade);
 // Step 4: Compare the grades:
 // Check if the Design grade is greater than or equal to 50 (passing grade). Store the result in a variable called isDesignPassed.
 
+const isDesignPassed = designGrade >= minimumGrade;
+console.log(isDesignPassed);
+
+
 // Check if the Development grade is greater than or equal to 50. Store the result in a variable called isDevelopmentPassed.
 
+const isdevelopmentPassed = developmentGrade >= minimumGrade;
+console.log(isdevelopmentPassed);
+
 // Check if the Project Management grade is greater than or equal to 50. Store the result in a variable called isProjectManagementPassed.
+
+const isprojectManagementPassed = projectManagementGrade >= minimumGrade;
+console.log(isprojectManagementPassed);
 
 
 // Step 5: Use logical operators:
 // Check if the student passed all three courses by ensuring that all course grades are 50 or above. Store the result in a variable called passedAllCourses.
 // Check if the student failed any course (i.e., if any course grade is below 50). Store the result in a variable called failedAnyCourse.
 
+const passedAllCourses = isDesignPassed && developmentGrade && projectManagementGrade >= minimumGrade && isprojectManagementPassed;
+console.log('does the student pass? ' + passedAllCourses);
+
+const failedAnyCourse = designGrade < minimumGrade || developmentGrade < minimumGrade || projectManagementGrade < minimumGrade;
+console.log('studen falled any course? ' + failedAnyCourse);
+
 // Step 6: Output the results to the console using console.log():
 // Print the total grade.
+console.log('total grade: ' + totalGrade);
 // Print the average grade.
+console.log('average grade: ' + averageGrade);
 // Print whether the student passed each course. Did the student pass...
+console.log('did the student pass design?  ' + isDesignPassed);
+console.log('did the student pass development?  ' + isdevelopmentPassed);
+console.log('did the student pass project management?' + isprojectManagementPassed);
 // Print whether the student passed all courses.
+console.log('did the student pass all?  ' + passedAllCourses);
+
 // Print whether the student failed any course.
+console.log('did the student fail none?  ' + failedAnyCourse);
+
+if(passedAllCourses == true){
+    alert("Wow, good student!");
+}
 
 
 
