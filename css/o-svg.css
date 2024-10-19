@@ -1,0 +1,20 @@
+.o-svg{
+    width: 100%;
+    height: 100%;
+    transform-origin: 50% 50%;
+}
+
+.o-svg__bgCircleG{
+    fill: #ddfbd0;
+    stroke-width: 0px;
+}
+
+.o-svg__bgCircleR{
+    fill: #fdf0e5;
+    stroke-width: 0px;
+}
+
+.o-svg__shadow{
+    fill: #bfedf7;
+    stroke-width: 0px;
+}

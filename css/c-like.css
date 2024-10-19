@@ -1,0 +1,14 @@
+.c-like{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    right: 10%;
+    z-index: 2;
+}
+.c-like__i{
+    font-size: 10rem;
+    transform: scale(10);
+}

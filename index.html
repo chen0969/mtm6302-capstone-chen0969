@@ -1,12 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web 3</title>
+    <title>Capstone-chen0969: Poke panel</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- NES -->
+    <link rel="stylesheet" href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" />
+    <!-- animate.style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- style link -->
+    <link rel="stylesheet" href="css/wrap-up-style.css">
 </head>
+
 <body>
-    
+    <!-- bg -->
+    <div id="bg" class="l-bg"></div>
+    <header>
+        <div class="container m-1">
+            <!-- nav -->
+            <div class="row pb-1 l-nav">
+                <div class="col-3">
+                    <button class="o-btn__main"><a href="index.html">HOME</a></button>
+                </div>
+                <div class="col-3">
+                    <button class="o-btn__main"><a href="about.html">ABOUT</a></button>
+                </div>
+                <div class="col-3">
+                    <button class="o-btn__main"><a href="contact.html">CONTACT</a></button>
+                </div>
+            </div>
+            <!-- description -->
+            <div class="row">
+                <div class="col-12">
+                    <p id="comment">Wow! A Pokemon just showed up! Let's check it out!</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container l-gameGround">
+            <div class="row d-flex flex-xl-row flex-column-reverse">
+                <!-- the panel -->
+                <div class="col-xl-8 col-12 c-panel">
+                    <div id="panel" class="c-panel__svg">
+                        <!-- svg in here -->
+                    </div>
+                    <!-- content here -->
+                    <div class="container c-panel__content">
+                        <div class="row">
+                            <!-- poke -->
+                            <div class="col-4 col-md-3 d-xl-block d-none">
+                                <img class="pokeimgFrontPic " src="" alt="pokemon img">
+                            </div>
+                            <!-- info -->
+                            <div class="col-8 col-md-9">
+                                <!-- info detail -->
+                                <div id="infoDetail" class="row">
+                                    <div class="col-12 d-flex flex-row nes-container is-rounded">
+                                        <p>Name:</p>
+                                        <p class="mainPokeName"></p>
+                                    </div>
+                                    <div class="col-6 d-flex flex-row">
+                                        <p>Id:</p>
+                                        <p id="mainPokeId"></p>
+                                    </div>
+                                    <div class="col-6 d-flex flex-row">
+                                        <p>Weight:</p>
+                                        <p id="mainPokeWeight"></p>
+                                    </div>
+                                    <div class="col-12 nes-balloon from-left nes-pointer">
+                                        <h6>Description:</h6>
+                                        <div class="d-flex flex-row">
+                                            <p>Hey look! We got&nbsp;</p>
+                                            <p class="mainPokeName"></p>
+                                        </div>
+                                    </div>
+                                    <h5 class="col-12 d-flex flex-row nes-balloon from-left nes-pointer">
+                                        <p>Type:</p>
+                                        <p id="mainPokeType"></p>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- the poke -->
+                <div class="col-xl-4 col-22">
+                    <img class="pokeimgFrontPic" src="" alt="pokemon img">
+                    <div id="pokeShadow"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- poke catch file -->
+        <div id="pokeCatch" class="c-catch d-none"></div>
+        <!-- poke 20 cards -->
+        <div class="container">
+            <div class="row">
+                <h3 class="col-12 text-center">See more pokes</h3>
+            </div>
+            <div id="poke20Show" class="row justify-content-center">
+                <div class="col-md-2 col-6 nes-container is-rounded d-flex flex-column align-items-center m-2">
+                    <!-- <img src="" alt="the poke"> -->
+                    <p>poke name</p>
+                </div>
+            </div>
+        </div>
+        <!-- like poke -->
+        <section id="likePoke" class="icon-list c-like"></section>
+    </main>
+    <footer class="container">
+        <p>© 2024 Broccoli Design Studio. All rights reserved.</p>
+    </footer>
 </body>
-<script src="js/main.js"></script>
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- fetch -->
+<script src="js/fetch.js"></script>
+<!-- svg -->
+<script src="js/svgs.js"></script>
+<!-- small function -->
+<script src="js/functions.js"></script>
+
 </html>

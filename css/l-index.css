@@ -1,0 +1,26 @@
+body{
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: unset;
+    color: var(--u-link);
+}
+
+a:hover{
+    text-decoration: unset;
+    color: var(--u-link-hover);
+}
+
+.l-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.l-gameGround{
+    width: 85%;
+}

@@ -1,0 +1,18 @@
+.c-panel{
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    grid-template-rows: repeat(30, 1fr);
+}
+
+.c-panel__svg{
+    z-index: 0;
+    grid-column: 1/31;
+    grid-row: 1/31;
+}
+
+.c-panel__content{
+    z-index: 1;
+    grid-column: 6/28;
+    grid-row: 3/23;
+}
+

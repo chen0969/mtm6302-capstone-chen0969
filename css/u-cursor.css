@@ -1,0 +1,7 @@
+body{
+    cursor: url(../media/cursor-s.cur), auto;
+}
+
+a, button, #onOff, #next, #previous, #catch, #other, #like{
+    cursor: url(../media/cursor-point.cur), auto;
+}

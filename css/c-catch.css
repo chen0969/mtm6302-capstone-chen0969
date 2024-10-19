@@ -1,0 +1,14 @@
+.c-catch{
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    width: auto;
+    height: 100%;
+    z-index: 10;
+}
+
+.c-catch__text{
+    fill: black; 
+    font-family: "Press Start 2P", system-ui;
+    font-size: 2rem;
+}
