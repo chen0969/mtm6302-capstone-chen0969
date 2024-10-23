@@ -17,3 +17,6 @@ Poke Playground (PP) is a website concept designed around the Pokédex API. Unli
 	•	CSS Framework: NES.CSS (https://nostalgic-css.github.io/NES.css/) <br/>
 	•	Responsive Design: Bootstrap (https://getbootstrap.com/) <br/>
 	•	Pokémon Data: PokéAPI (https://pokeapi.co/) <br/>
+
+## Report -- My personal review (part-3)
+	As an SCSS enthusiast, I’ve come to appreciate the differences between CSS and SCSS once again in this project. Since I was trained to follow the BEM class naming system, which fits well with SCSS, I realize that CSS code requires better structure and consideration during development.

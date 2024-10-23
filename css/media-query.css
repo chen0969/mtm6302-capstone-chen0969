@@ -1,0 +1,29 @@
+@media screen and (max-width: 1500px){
+    .c-panel__content > .row{
+        transform: scale(0.9);
+    }
+}
+@media screen and (max-width: 1024px){
+    .c-panel__content > .row{
+        transform: scale(0.8);
+    }
+}
+@media screen and (max-width: 768px){
+    a, p, div, button{
+        font-size: 0.8rem;
+    }
+    .c-panel__content > .row{
+        background-color: white;
+        padding: 10vw;
+        width: 100vw;
+        transform: scale(0.5) translateX(-50vw) translateY(10vw);
+    }
+}
+@media screen and (max-width: 360px){
+    a, p, div, button{
+        font-size: 0.5rem;
+    }
+    .c-panel__content > .row{
+        transform: scale(0.5) translateX(-40vw);
+    }
+}

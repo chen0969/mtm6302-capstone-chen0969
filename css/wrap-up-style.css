@@ -16,3 +16,6 @@
 /* object */
 @import url(o-btn.css);
 @import url(o-svg.css);
+
+/* media query */
+@import url(media-query.css);
