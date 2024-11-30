@@ -5,16 +5,19 @@ const bg = document.getElementById('bg');
 const panel = document.getElementById('panel');
 const pokeShadow = document.getElementById('pokeShadow');
 
-
 // svgs
-bg.innerHTML = `
-<svg class="o-svg animate__animated animate__zoomIn">
-  <circle class="o-svg__bgCircleG" cx="100vw" cy="0" r="288"/>
-  <circle class="o-svg__bgCircleR" cx="0" cy="150vh" r="730"/>
-</svg>
-`;
+function bg_svg() {
+  bg.innerHTML = `
+  <svg class="o-svg animate__animated animate__zoomIn">
+    <circle class="o-svg__bgCircleG" cx="100vw" cy="0" r="288"/>
+    <circle class="o-svg__bgCircleR" cx="0" cy="150vh" r="730"/>
+  </svg>
+  `;
+}
+bg_svg();
 
-panel.innerHTML = `
+function panel_svg() {
+  panel.innerHTML = `
 <svg class="o-svg" viewBox="0 0 1056.3 820.7">
   <g>
     <rect x="-7.3" y="730.2" width="207.9" height="181.8" rx="4.8" ry="4.8" transform="translate(369.1 40.5) rotate(26)" style="fill: #ffc995; stroke-width: 0px;"/>
@@ -32,32 +35,32 @@ panel.innerHTML = `
   <rect x="984.3" y="120" width="59" height="237" style="fill: #d8ef09; stroke-width: 0px;"/>
   <ellipse cx="1013.8" cy="356.5" rx="29.5" ry="8.5" style="fill: #adc3c8; stroke-width: 0px;"/>
   <ellipse cx="1013.8" cy="119.5" rx="29.5" ry="8.5" style="fill: #d8ef09; stroke-width: 0px;"/>
-  <g id="onOff" onclick="on_off()">
+  <g id="onOff">
     <rect x="912.3" y="648" width="75" height="38" rx="5" ry="5" style="fill: #faa992; stroke-width: 0px;"/>
     <rect x="909.3" y="645" width="75" height="38" rx="5" ry="5" style="fill: #fdf0e5; stroke-width: 0px;"/>
     <path d="M946.3,655c5,0,9,4,9,9s-4,9-9,9-9-4-9-9,4-9,9-9M946.3,651c-7.2,0-13,5.8-13,13s5.8,13,13,13,13-5.8,13-13-5.8-13-13-13h0Z" style="fill: #21401f; stroke-width: 0px;"/>
   </g>
-  <g id="next" onclick="randomPoke()">
+  <g id="next">
     <rect x="788.3" y="648" width="75" height="38" rx="5" ry="5" style="fill: #faa992; stroke-width: 0px;"/>
     <rect x="785.3" y="645.3" width="75" height="38" rx="5" ry="5" style="fill: #fdf0e5; stroke-width: 0px;"/>
     <polygon points="833.2 663.8 815.4 653.5 815.4 674 833.2 663.8" style="fill: #21401f; stroke-width: 0px;"/>
   </g>
-  <g id="previous" onclick="randomPoke()">
+  <g id="previous">
     <rect x="186.3" y="648" width="75" height="38" rx="5" ry="5" transform="translate(447.6 1334) rotate(180)" style="fill: #faa992; stroke-width: 0px;"/>
     <rect x="183.3" y="645.3" width="75" height="38" rx="5" ry="5" transform="translate(441.6 1328.5) rotate(180)" style="fill: #fdf0e5; stroke-width: 0px;"/>
     <polygon points="210.4 664.8 228.2 675 228.2 654.5 210.4 664.8" style="fill: #21401f; stroke-width: 0px;"/>
   </g>
-  <g id="catch" onclick="catchPoke()">
+  <g id="catch">
     <rect x="473" y="648.3" width="136.3" height="38" rx="5" ry="5" style="fill: #faa992; stroke-width: 0px;"/>
     <rect x="470" y="645.3" width="136.3" height="38" rx="5" ry="5" style="fill: #fdf0e5; stroke-width: 0px;"/>
     <text transform="translate(482.8 674.2)" style="fill: #21401f; font-family: PressStart2P-Regular, &apos;Press Start 2P&apos;; font-size: 19.1px;"><tspan x="0" y="0">Catch!</tspan></text>
   </g>
-  <g id="other" onclick="poke20Join()">
+  <g id="other">
     <rect x="630" y="648.3" width="136.3" height="38" rx="5" ry="5" style="fill: #faa992; stroke-width: 0px;"/>
     <rect x="627" y="645.3" width="136.3" height="38" rx="5" ry="5" style="fill: #fdf0e5; stroke-width: 0px;"/>
     <text transform="translate(639.8 674.2)" style="fill: #21401f; font-family: PressStart2P-Regular, &apos;Press Start 2P&apos;; font-size: 19.1px;"><tspan x="0" y="0">Other!</tspan></text>
   </g>
-  <g id="like" onclick="likeThePoke()">
+  <g id="like">
     <rect x="314.3" y="648.3" width="136.3" height="38" rx="5" ry="5" style="fill: #faa992; stroke-width: 0px;"/>
     <rect x="311.3" y="645.3" width="136.3" height="38" rx="5" ry="5" style="fill: #fdf0e5; stroke-width: 0px;"/>
     <text transform="translate(324.1 674.2)" style="fill: #21401f; font-family: PressStart2P-Regular, &apos;Press Start 2P&apos;; font-size: 19.1px;"><tspan x="0" y="0">Like!</tspan></text>
@@ -71,9 +74,40 @@ panel.innerHTML = `
   </g>
 </svg>
 `;
+}
+panel_svg();
 
-pokeShadow.innerHTML = `
-<svg class="o-svg">
-  <ellipse class="o-svg__shadow" cx="50%" cy="50%" rx="50%" ry="25%"/>
-</svg>
-`;
+function pokeShadow_svg() {
+  pokeShadow.innerHTML = `
+  <svg class="o-svg">
+    <ellipse class="o-svg__shadow" cx="50%" cy="50%" rx="50%" ry="25%"/>
+  </svg>
+  `;
+}
+pokeShadow_svg();
+
+// events
+function click_events() {
+  document.getElementById('onOff').addEventListener('click', on_off);
+  document.getElementById('next').addEventListener('click', randomPoke);
+  document.getElementById('previous').addEventListener('click', randomPoke);
+  document.getElementById('catch').addEventListener('click', catchPoke);
+  document.getElementById('other').addEventListener('click', poke20Join);
+  document.getElementById('like').addEventListener('click', likeThePoke);
+};
+click_events();
+
+// functions
+function on_off() {
+  const infoDetail = document.getElementById('infoDetail');
+  infoDetail.classList.toggle('d-none');
+  mainPokePanelPic.classList.toggle('d-none');
+}
+
+function likeThePoke() {
+  const likePoke = document.getElementById('likePoke');
+  const createI = document.createElement('i');
+  createI.classList.add('nes-icon', 'heart', 'c-like__i', 'animate__animated', 'animate__bounce', 'animate__repeat-2');
+  likePoke.appendChild(createI);
+}
+// fetches
